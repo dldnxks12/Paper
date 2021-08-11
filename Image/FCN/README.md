@@ -1,7 +1,5 @@
 ## Fully Convolutional Networks for Semantic Segmentataion `8 March 2015`
 
----
-
 ### 요약 
 
 1. Semantic Segmentation은 Coarse부터 Fine까지 inference를 통해 모든 픽셀에 대해 Class를 분류하는 것이다. 
