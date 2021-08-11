@@ -48,3 +48,49 @@ Deconvolution (Upsampling)에는 2가지가 있다.
 2. Convolutional layer의 stride에 의한 축소를 복원하는 것 
 
 
+- Pooling layer 복원 방법
+
+1. Nearest Neighbor Unpooling : 2x2 -> 4x4로 사이즈를 키울 때, 같은 값으로 복제하는 방법
+
+![image](https://user-images.githubusercontent.com/59076451/129032531-b5c4f6ce-f252-47bb-84e8-d624cebb606d.png)
+
+2. Bed of Nails Unpooling : 정해진 위치에만 값을 채우고, 나머지는 0으로 채우는 방법 
+
+![image](https://user-images.githubusercontent.com/59076451/129032703-d8d49996-50a8-40cc-80fa-3645644ec6d8.png)
+
+3. Max Unpooling : Max Unpooling은 대칭되는 Max pooling 단계에서의 위치를 기억하고, 그 위치에 값을 복원한다
+
+![image](https://user-images.githubusercontent.com/59076451/129032763-b8781e14-dcb5-4e01-8a2d-d5af68ba23b8.png)
+
+
+- Convolutional layer 복원 방법
+
+1. Transpose Convolution : 행렬을 이용한 방법 
+
+다음은 (4 x 4) 입력 영상에 padding = 0, stride = 1, kernel size = (3 x 3) 을 이용해서 feature map을 뽑는 과정이다.
+
+![image](https://user-images.githubusercontent.com/59076451/129033306-b6870f54-868c-4f8f-94eb-fc31ded6ddae.png)
+
+위 기본적인 행렬 연산을 다음과 같은 Toepliz Matrix로 만들어서 계산한 결과를 확인할 수 있다.
+
+        (3 x 3) kernel -> (4 x 16) kernel
+        (4 x 4) input  -> (1 x 16) input 
+
+Deconvolution은 (4 x 16) kernel을 transpose해서 기존 Output Max과 연산해서 Input Matrix를 출력한다.
+
+        (4 x 16) kernel은 SO(3) matrix로써 Transpose = Inverse이다.
+        
+        따라서 기존 행렬 연산의 양 변에 kernel의 inverse를 곱함으로 입력 Mat을 추출해낼 수 있다!
+
+![image](https://user-images.githubusercontent.com/59076451/129034313-aa90a029-a35f-405a-b092-28d4db95f955.png)
+    
+
+따라서 위와 같은 방법으로 Convolution의 역 연산을 수행한다.
+
+        즉, 출력 데이터와 kernel을 통해 해당 layer로 들어오는 입력 데이터를 구해낼 수 있다.
+
+
+    
+    
+
+
