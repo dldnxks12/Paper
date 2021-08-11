@@ -1,6 +1,7 @@
 ## Notation
 
 - Sparse Data ? Spartial Data?
+- Coarse ? Fine ? 
 
 #### Spatial data 
 
@@ -32,3 +33,14 @@ ML에서는 매우 고차원 데이터를 다루는 경우가 많은데, 그 만
 
     이 때 차원 축소등을 통해 데이터를 Dense하게 만들어 사용한다!
 
+#### Coarse grained
+
+    data의 분류를 큼직큼직하게 하는 것
+    
+            dog, cat, horse ...
+
+#### Fine grained
+
+    data의 분류를 세밀하게 하는 것
+
+            big dog, middle dog, small dog ...
