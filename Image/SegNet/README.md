@@ -3,6 +3,8 @@
 - UnPooling
 
     Pooling layer에 의해 축소된 이미지를 복원하는 것 
+    
+    [Unpooling - pytorch](https://pytorch.org/docs/stable/generated/torch.nn.Upsample.html)
            
 - UpSamping
 
