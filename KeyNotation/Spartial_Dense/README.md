@@ -32,6 +32,11 @@ ML에서는 매우 고차원 데이터를 다루는 경우가 많은데, 그 만
 이 Sparse한 데이터를 가지고 학습할 시 잘 되지 않는다.
 
     이 때 차원 축소등을 통해 데이터를 Dense하게 만들어 사용한다!
+    
+        SegNet에서 UnPooling 후 일련의 Conv layer를 통해 Sparse data를 Dense data로 만듦
+        
+        NIN과 GoogLeNet의 Inception Net에서도 1x1 Conv Layer를 통해 Sparse data를 가지고도 Dense data로 만들어 학습할 수 있음을 보임
+    
 
 #### Coarse grained
 
