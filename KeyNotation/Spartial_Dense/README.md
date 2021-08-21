@@ -29,9 +29,9 @@
 
 ML에서는 매우 고차원 데이터를 다루는 경우가 많은데, 그 만큼 데이터가 Sparse해질 확률도 높다.
 
-이 Sparse한 데이터를 가지고 학습할 시 잘 되지 않는다.
+    !Sparse한 데이터를 가지고 학습할 시 잘 되지 않는다.
 
-    이 때 차원 축소등을 통해 데이터를 Dense하게 만들어 사용한다!
+따라서 차원 축소 등의 방법을 통해 데이터를 Dense하게 만들어 사용한다
     
         SegNet에서 UnPooling 후 일련의 Conv layer를 통해 Sparse data를 Dense data로 만듦
         
