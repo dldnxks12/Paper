@@ -51,7 +51,9 @@ SegNet의 구조는 Encoder와 Decoder로 나뉜다.
 
 Encoder는 VGG16의 뒷 단의 FC layer를 제외한 구조를 그대로 사용한다.
 
-또한 뒤의 UnPooling하는 과정에서 필요하기에 Pooling이 해당 Index들을 저장해둔다.
+        Encodedr의 Conv layer에서 주목할 점은 모두 1x1 filter를 사용한다는 것
+
+        Pooling layer에서 주목할 점은 뒤의 UnPooling하는 과정에서 필요하기에 Pooling 수행 시 해당 Index들을 저장해둔다는 것
     
 <div align=center>
   
