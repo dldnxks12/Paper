@@ -31,7 +31,7 @@ SegNet에서는 Pooling 과정에서 Max Index를 기억하고, 단순히 Un-Poo
 
 #### UnPooling (Un-maxpooling)의 장점
 
-1. boundary delineation(묘사) 측면에서 성능이 좋다. (강한 자극을 받은 Pixel에 대해서 복원을 진행하기 때문에 Edge와 같은 feature가 두드러진 곳을 잘 기억하고 복원한다.)
+1. boundary delineation(묘사) 측면에서 성능이 좋다. <br>(강한 자극을 받은 Pixel에 대해서 복원을 진행하기 때문에 Edge와 같은 feature가 두드러진 곳을 잘 기억하고 복원한다.)
 
 2. upsampling을 위해 deconvolution layer를 사용하지 않기 때문에 별도의 학습 파라미터가 없다.
     
