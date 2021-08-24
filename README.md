@@ -5,22 +5,22 @@
     
 #### Paper List
 
+- Image 
 
-Image 
-
-    1. VGG
-    2. GoogLeNet
-    3. FCN
-    4. DeConvNet
-    5. SegNet
+        1. VGG
+        2. GoogLeNet
+        3. FCN
+        4. DeConvNet
+        5. SegNet
     
-NLP
+- NLP
 
-    1. RNN/LSTM/GRU
-    2. Seq2Seq
-    3. Transformer
+        1. RNN/LSTM/GRU
+        2. Seq2Seq
+        3. Transformer
+
     
-Key Notation
+#### Key Notation
 
     1. Deconvolution
     2. Sparse-Dense data / Coarse-Grain data / Spartial data
