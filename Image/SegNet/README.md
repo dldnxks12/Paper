@@ -6,7 +6,7 @@
     
 <div align=center>
 
-    ![111](https://user-images.githubusercontent.com/59076451/130569376-8dbf608a-589c-401d-b536-8dd35dd4b3c1.PNG)
+![111](https://user-images.githubusercontent.com/59076451/130569376-8dbf608a-589c-401d-b536-8dd35dd4b3c1.PNG)
 
 </div>    
         
