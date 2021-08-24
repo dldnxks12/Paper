@@ -120,5 +120,13 @@ Deconvolution Network의 수행 결과를 찬찬히 뜯어보자
 <div align=center>
 
 ![image](https://user-images.githubusercontent.com/59076451/130652662-1f78870c-affb-4e5a-a4dd-09c1947c3972.png)
+
+
+DeConv architecture  
   
+![image](https://user-images.githubusercontent.com/59076451/130654129-964ce570-8c2f-4aa1-b947-fe3d4d0a319f.png)
+    
 </div>  
+
+
+
