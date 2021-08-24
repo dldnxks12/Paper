@@ -4,6 +4,12 @@
 
     Pooling layer에 의해 축소된 이미지를 복원하는 것 
     
+<div align=center>
+
+    ![111](https://user-images.githubusercontent.com/59076451/130569376-8dbf608a-589c-401d-b536-8dd35dd4b3c1.PNG)
+
+</div>    
+        
     [Unpooling - pytorch](https://pytorch.org/docs/stable/generated/torch.nn.Upsample.html)
            
 - UpSamping
