@@ -10,7 +10,7 @@
 
 </div>    
         
-    [Unpooling - pytorch](https://pytorch.org/docs/stable/generated/torch.nn.Upsample.html)
+[Unpooling - pytorch](https://pytorch.org/docs/stable/generated/torch.nn.Upsample.html)
            
 - UpSamping
 
