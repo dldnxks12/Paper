@@ -12,6 +12,7 @@
         3. FCN
         4. DeConvNet
         5. SegNet
+        6. U-Net
     
 - NLP
 
