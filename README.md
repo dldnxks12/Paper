@@ -27,6 +27,7 @@
         2. Sparse-Dense data / Coarse-Grain data / Spartial data
         3. Dilated Convolution
         4. Batch Norm 
+        5. Interpolation 
 
 
 
