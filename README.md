@@ -28,6 +28,6 @@
         3. Dilated Convolution
         4. Batch Norm 
         5. Interpolation 
-
+        6. Bayes Theorem 
 
 
