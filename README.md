@@ -43,3 +43,5 @@
 - Todo
 
         1. Maximum Likelihood Estimation
+        2. HMM
+        3. CRF
