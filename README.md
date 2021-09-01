@@ -2,7 +2,11 @@
 
     1. 논문 리뷰
     2. 중요 개념 정리
-    
+            
+---
+
+<br>
+
 #### Paper List
 
 - Image 
@@ -20,6 +24,9 @@
         2. Seq2Seq
         3. Transformer
 
+---
+
+<br>
     
 #### Key Notation
 
