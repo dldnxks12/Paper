@@ -23,8 +23,10 @@
     
 #### Key Notation
 
-    1. Deconvolution
-    2. Sparse-Dense data / Coarse-Grain data / Spartial data
+        1. Deconvolution
+        2. Sparse-Dense data / Coarse-Grain data / Spartial data
+        3. Dilated Convolution
+        4. Batch Norm 
 
 
 
