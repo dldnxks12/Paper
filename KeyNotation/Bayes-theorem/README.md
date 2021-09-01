@@ -263,3 +263,21 @@ K는 4라고 생각하면 된다. 위 식의 괄호 안에 사건들이 각각 �
 **이처럼 베이즈 정리는 새로운 정보에 대해 어떻게 계산을 하고, 또 결과를 도출해 낼 수 있는 지를 알려주는 굉장히 좋은 도구이다.**
       
 
+      
+#### 용어 정리 
+      
+
+<div align=center>      
+      
+![image](https://user-images.githubusercontent.com/59076451/131617302-0e7c0699-ae26-4b30-998a-bc5b09a303e2.png)
+      
+</div>      
+
+            P(A)   : A의 사전 확률      
+            P(B)   : B의 사전 확률      
+            P(A|B) : 사후 확률      
+            P(B|A) : 우도 (Likelihood)  --- 보통 알려져있다고 가정한다. 
+
+      
+      
+[예시 링크](http://solarisailab.com/archives/2614)
