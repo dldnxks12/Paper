@@ -23,6 +23,8 @@
     
 #### Key Notation
 
+- Done
+
         1. Deconvolution
         2. Sparse-Dense data / Coarse-Grain data / Spartial data
         3. Dilated Convolution
@@ -31,3 +33,6 @@
         6. Bayes Theorem 
 
 
+- Todo
+
+        1. Maximum Likelihood Estimation
