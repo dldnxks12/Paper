@@ -10,6 +10,8 @@ Naive Bayes를 이해하기 위해서는 다음의 순서대로 차근차근 이
       2. 독립사건
       3. 분할
       4. 베이즈 정리
+      
+[참고 링크](https://junpyopark.github.io/bayes/)      
 
 ---
 
