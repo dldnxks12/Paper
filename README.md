@@ -38,10 +38,13 @@
         4. Batch Norm 
         5. Interpolation 
         6. Bayes Theorem 
+        7. Markov Model 
+                - Markov Chain 
+                
 
 
 - Todo
 
         1. Maximum Likelihood Estimation
-        2. HMM
+        2. Hidden Markov Model 
         3. CRF
