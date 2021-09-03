@@ -30,22 +30,6 @@ Markov Property, Markov chain, Markov model 등의 기본 개념부터 하나씩
 
             반면 1차 Markov chain은 n번 째 상태가 n+1 상태를 결정하는데 영향을 미친다!
 
----
-
-<br>
-
-#### Markov Chain
-
-- n 차 Markov Chain
-
-        N+1 번 째 상태가 N번 째 상태에만 영향을 받는다면 1차 Markov Chain 
-
-        N+1 번 째 상태가 N번 째, N-1 상태에 영향을 받는다면 2차 Markov Chain 
-
-
----
-
-<br>
 
 
 
