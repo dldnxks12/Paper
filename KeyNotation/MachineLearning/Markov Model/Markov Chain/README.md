@@ -5,11 +5,11 @@
 
 - Markov Chain
 
-        Markov Property를 가진 이산 확률과정을 뜻한다. 
+        Markov Property를 가진 이산 확률과정 모델을 뜻한다. 
 
           * Markov Property : 특정 상태의 확률은 오직 특정 기간의 과거 상태에 의존한다.
 
-            Ex) 오늘 날씨가 맑다면 내일 날씨는 맑을 지, 비가 내릴 지에 영향을 미친다. 
+            Ex) 오늘 날씨가 맑다면 내일 날씨는 맑을 지, 비가 내릴 지.. 
 
        
 - n 차 Markov Chain
@@ -25,14 +25,66 @@
   
 </div>  
 
+---
+
+<br>
+
+#### Why Markov Chain?
+
+    Markov Chain model을 이용해서 확률이 제일 크게 되는 쪽으로 미래를 예측해볼 수 있다!
+
+<br>
+
+#### What can we do?
+
+- 풀수 있는 문제 
+
+<br>
+
+  **문제 1)** 과거의 관측치가 아래와 같을 때, 다음 날의 날씨는 무엇일까?
+
+      Sunny - Sunny - Cloudy - Rainy - Sunny - ?
+
+1차 Markov Chain 모델이라 가정하면 위의 문제는 직전 State만을 이용한 P(? | Sunny) 중 가장 큰 확률의 값을 취한다.
+
+      Sol : 만약 P( Sunny | Sunny )  = 0.7 , P( Cloudy | Sunny )  = 0.1 , P( Rainy | Sunny )  = 0.2
+
+            라면, 다음 날의 날씨는 Sunny로 예측한다. 
+
+<br>
+
+하지만 우리는 단순히 과거의 정보들로 오늘 날씨를 예측하고 싶은 것이 아니다.
+
+**우리는 이 정보들을 통해 미래를 예측해보고 싶은 것이다!**
+
+다음의 문제를 보자 
+
+<br>
+
+  **문제 2)** 오늘 날씨가 Sunny인 경우, 다음 7일 간의 날씨 변화가 아래와 같을 확률은?
+
+    sunny - sunny - rainy - rainy - sunny - cloudy - sunny
+
+이 문제는 다음과 같이 Sequence Probability 를 이용해서 계산할 수 있다. 
+
+    Sol :  P(q1, q2, ...., qt)
+
+           = P(q1) x P(q2 | q1) x P(q3 | q1, q2) x ... x P(qt-1 | q1, q2,...qt-2) x P(qt | q1, q2,...qt-1)  
+                  ... P(qt | q1, q2,...qt-1) <- chain rule
+                
+           = P(q1) x P(q2 | q1) x P(q3 | q2) x ... x P(qt-1 | qt-2) x P(qt | qt-1)
+                  ....Markov chain  ... ( if 1th order )
+
+결과적으로 Chain rule에 따라 복잡하게 계산해야 구할 수 있던 Sequence에 대한 확률을 Markov chain으로 쉽게 구할 수 있다.
+
+    물론 모델을 train 시켜 상태 천이 확률이 수렴된 후에 사용할 수 있지만 말이다!
+      
 
 ---
 
 <br>
 
 #### 상태 전이 확률
-
-<br>
 
 <div align=center>
 
@@ -58,7 +110,6 @@ Graph로 표현하게 되면 아래와 같다.
 
 #### Markov Chain 예시
 
-<br>
 
 1차 Markov Chain을 이용한 예시를 들어보자.
 
