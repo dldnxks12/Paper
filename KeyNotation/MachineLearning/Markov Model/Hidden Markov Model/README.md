@@ -1,6 +1,18 @@
 ## Hidden Markov Model
 
-[참고 링크 1](https://sanghyu.tistory.com/17)      
+- 참고링크 
+
+[참고 링크 1](https://sanghyu.tistory.com/17)       
+[참고 링크 2](https://untitledtblog.tistory.com/97) <br>
+[참고 링크 2](https://ratsgo.github.io/machine%20learning/2017/03/18/HMMs/) 
+
+---
+
+<br>
+
+#### Before Hidden Markov Model ...
+
+- Markov Chain 
 
 Markov Chain은 모든 State에 대해 관찰이 가능한 시스템이다. 
  
@@ -12,19 +24,20 @@ Markov Chain은 모든 State에 대해 관찰이 가능한 시스템이다.
  
 <br>
 
+#### Hidden Markov Model
+
 - Hidden?
 
 Hidden Markov Model은 Markov Chain과는 다르게 일부 State만 관찰이 가능한 모델이다.  
 (주로 Sequential한 데이터의 분류에서 사용된다)
 
-      * Hidden은 Markov Chain에서의 State가 숨겨져있다는 것을 의미한다
+      *Hidden은 Markov Chain에서의 State가 숨겨져있다는 것을 의미한다
 
             1차 Markov Chain을 예로 들어보자.
 
             우리가 다음 State를 예측하고 싶어서 지금의 State를 들여다 보아야하는데, 이 State들이 일부 숨겨져 있는 것이다..
 
-
-- Hidden Markov Model
+- Hidden Markov Model (HMM)
 
       HMM은 Markov Chain에 숨겨진 State와 직접 확인이 가능한 Observation을 추가해서 확장한 것이다.
 
