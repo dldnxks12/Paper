@@ -21,7 +21,7 @@
             - DeepLab Overview
             - DeepLab v1 
             - DeepLab v2
-            - DeepLab v3
+            - DeepLab v3 , v3+
     
 - NLP
 
