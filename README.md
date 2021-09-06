@@ -17,6 +17,11 @@
         4. DeConvNet
         5. SegNet
         6. U-Net
+        7. DeepLab 
+            - DeepLab Overview
+            - DeepLab v1 
+            - DeepLab v2
+            - DeepLab v3
     
 - NLP
 
@@ -40,11 +45,11 @@
         6. Bayes Theorem 
         7. Markov Model 
                 - Markov Chain 
-                
+                - Hidden Markov Model (Baum-Welch algorithm ~ing)
 
 
 - Todo
 
-        1. Maximum Likelihood Estimation
-        2. Hidden Markov Model 
-        3. CRF
+        1. Maximum Likelihood Estimation (최대 우도법) 
+        2. CRF
+        3. Lagrange Multiplier Method (라그랑주 승수법)
