@@ -1,3 +1,4 @@
+
 #### Goal 
 
     1. 논문 리뷰
@@ -41,9 +42,8 @@
         2. Sparse-Dense data / Coarse-Grain data / Spartial data
         3. Dilated Convolution
         4. Batch Norm 
-        5. Interpolation 
-        6. Bayes Theorem 
-        7. Markov Model 
+        5. Interpolation  
+        6. Markov Model 
                 - Markov Chain 
                 - Hidden Markov Model (Baum-Welch algorithm ~ing)
 
@@ -53,3 +53,18 @@
         1. Maximum Likelihood Estimation (최대 우도법) 
         2. CRF
         3. Lagrange Multiplier Method (라그랑주 승수법)
+
+
+
+---
+
+<br>
+
+#### Math
+
+- Linear Algebra
+
+
+- Probability and Statistics
+
+        1. Bayes Theorem
