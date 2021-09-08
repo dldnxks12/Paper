@@ -2,15 +2,12 @@
 
 - Linear Algebra : 데이터 분석 및 특징 공간 변환
 
-    - Norm and Similarty
+<br>
 
 - Probability and Statistics : 데이터에 포함된 불확실성 표현 및 처리
 
-    - Bayes Theorem
-    - Maximum likelihood Estimation
+<br>
 
-
-    
 - Optimization : 목적함수를 최소화하기 위한 최적화 기법 
 
 ---
