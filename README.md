@@ -2,7 +2,8 @@
 #### Goal 
 
     1. 논문 리뷰
-    2. 중요 개념 정리
+    2. 논문 관련 중요 개념 정리
+    3. 수학 기본 배경지식 정리
             
 ---
 
@@ -54,8 +55,6 @@
         2. CRF
         3. Lagrange Multiplier Method (라그랑주 승수법)
 
-
-
 ---
 
 <br>
@@ -67,7 +66,9 @@
         1. Norm
         2. Similarity
         3. Feature Space 
-        4. Vector Space 
+        4. Vector Space (Basis Vector, RANK, Linear Combination, Linearly Independant)
+        5. Eigen Vector, Eigen Value
+        6. Decomposition 
 
 <br>
 
