@@ -66,6 +66,8 @@
 
         1. Norm
         2. Similarity
+        3. Feature Space 
+        4. Vector Space 
 
 <br>
 
