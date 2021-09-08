@@ -10,7 +10,7 @@
 
 #### Paper List
 
-- Image 
+- `Image` 
 
         1. VGG
         2. GoogLeNet
@@ -24,7 +24,7 @@
             - DeepLab v2
             - DeepLab v3 , v3+
     
-- NLP
+- `NLP`
 
         1. RNN/LSTM/GRU
         2. Seq2Seq
@@ -36,7 +36,7 @@
     
 #### Key Notation
 
-- Done
+- `Done`
 
         1. Deconvolution
         2. Sparse-Dense data / Coarse-Grain data / Spartial data
@@ -48,7 +48,7 @@
                 - Hidden Markov Model (Baum-Welch algorithm ~ing)
 
 
-- Todo
+- `Todo`
 
         1. Maximum Likelihood Estimation (최대 우도법) 
         2. CRF
@@ -62,9 +62,14 @@
 
 #### Math
 
-- Linear Algebra
+- `Linear Algebra`
 
+        1. Norm
+        2. Similarity
 
-- Probability and Statistics
+<br>
+
+- `Probability and Statistics`
 
         1. Bayes Theorem
+        2. Maximum Likelihood Estimation (최대 우도법)
