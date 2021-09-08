@@ -4,6 +4,8 @@ Machine Learning의 가장 중요한 연산 중 하나는 두 sample 간의 유�
 
 따라서 유사도에 대해서 간략하게 알아보자.
 
+---
+
 <br>
 
 #### Norm 
@@ -54,6 +56,8 @@ p차 Norm은 `Lp Norm` 이라고 한다.
 ![img_2.png](img_2.png)
 
 </div>
+
+---
 
 <br>
 
