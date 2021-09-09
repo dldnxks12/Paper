@@ -43,7 +43,7 @@
 
 <br>
 
-- Probability 
+- `Probability` 
 
         Event set(E) / Sample Space = P[E]
 
@@ -131,8 +131,8 @@ K개의 `집합 B1, B2 , ... , Bk`가 어떤 집합 S의 `분할`이 되려면 �
       1. B1, B2, ... Bk는 각각 서로소 여야한다. (서로 독립)  
 
       2. B1, B2, ... Bk 총 K개의 집합을 합집합 하였을 때, 그 집합은 정확히 S가 되어야한다.  
-  
-위의 `두 가지 조건`을 모두 만족하면 `B1, B2, ... Bk`를 그 집합의 `분할`이라고 한다!  
+
+<br>
   
 <div align=center>
   
