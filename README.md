@@ -3,7 +3,7 @@
 
     1. Paper Rewiew
     2. Key notion of Papers 
-    3. Basic Math  (Linear Algebra , Probability and Statistics)
+    3. Basic Math  - Linear Algebra , Probability and Statistics, Calculus
             
 
 <br>
