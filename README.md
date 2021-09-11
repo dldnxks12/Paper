@@ -1,14 +1,14 @@
 
 #### Goal 
 
-    1. 논문 리뷰
-    2. 논문 관련 중요 개념 정리
-    3. 수학 기본 배경지식 정리
+    1. Paper Rewiew
+    2. Key notion of Papers 
+    3. Basic Math  (Linear Algebra , Probability and Statistics)
             
 
 <br>
 
-#### Paper List
+#### Paper Review
 
 - `Image` 
 
@@ -33,7 +33,7 @@
 
 <br>
     
-#### Key Notation
+#### Key Notion
 
 - `ML and DL` 
 
