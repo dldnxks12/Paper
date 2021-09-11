@@ -5,7 +5,6 @@
     2. 논문 관련 중요 개념 정리
     3. 수학 기본 배경지식 정리
             
----
 
 <br>
 
@@ -31,13 +30,12 @@
         2. Seq2Seq
         3. Transformer
 
----
 
 <br>
     
 #### Key Notation
 
-- `Done`
+- `ML and DL` 
 
         1. Deconvolution
         2. Sparse-Dense data / Coarse-Grain data / Spartial data
@@ -46,16 +44,12 @@
         5. Interpolation  
         6. Markov Model 
                 - Markov Chain 
-                - Hidden Markov Model (Baum-Welch algorithm ~ing)
+                - Hidden Markov Model 
+                    - Forward-Backward Algorithm
+                    - Viterbi Algorithm
+                    - Baum-Welch algorithm ~ing
 
 
-- `Todo`
-
-        1. Maximum Likelihood Estimation (최대 우도법) 
-        2. CRF
-        3. Lagrange Multiplier Method (라그랑주 승수법)
-
----
 
 <br>
 
@@ -67,12 +61,17 @@
         2. Similarity
         3. Feature Space 
         4. Vector Space (Basis Vector, RANK, Linear Combination, Linearly Independant)
-        5. Eigen Vector, Eigen Value
-        6. Decomposition 
-
-<br>
 
 - `Probability and Statistics`
 
         1. Bayes Theorem
-        2. Maximum Likelihood Estimation (최대 우도법)
+
+
+- `Todo list`
+
+        1. Maximum Likelihood Estimation        
+        2. Lagrange Multiplier Method
+        3. CRF
+        4. Tayler Series 
+        5. Eigen Vector, Eigen Value
+        6. Decomposition(QR, Singular Value)
