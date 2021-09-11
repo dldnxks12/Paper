@@ -66,12 +66,14 @@
 
         1. Bayes Theorem
 
+- `Calculus`
+
+        1. Talyor Series
 
 - `Todo list`
 
         1. Maximum Likelihood Estimation        
         2. Lagrange Multiplier Method
-        3. CRF
-        4. Tayler Series 
-        5. Eigen Vector, Eigen Value
-        6. Decomposition(QR, Singular Value)
+        3. CRF 
+        4. Eigen Vector, Eigen Value
+        5. Decomposition(QR, Singular Value)
