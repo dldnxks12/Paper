@@ -3,7 +3,11 @@
 
     1. Paper Rewiew
     2. Key notion of Papers 
-    3. Basic Math  - Linear Algebra , Probability and Statistics, Calculus
+    3. Basic Math  
+    
+            - Linear Algebra 
+            - Probability and Statistics
+            - Calculus
             
 
 <br>
@@ -69,6 +73,8 @@
 - `Calculus`
 
         1. Talyor Series
+
+<br>
 
 - `Todo list`
 
