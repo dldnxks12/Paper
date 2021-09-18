@@ -27,6 +27,9 @@
             - DeepLab v1 
             - DeepLab v2
             - DeepLab v3 , v3+
+
+        8. R-CNN             ~ing
+        9. Selective Search  ~ing
     
 - `NLP`
 
