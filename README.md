@@ -3,12 +3,6 @@
 
     1. Paper Rewiew
     2. Key notion of Papers 
-    3. Basic Math  
-    
-            - Linear Algebra 
-            - Probability and Statistics
-            - Calculus
-            
 
 <br>
 
@@ -60,29 +54,4 @@
 
 <br>
 
-#### Math
 
-- `Linear Algebra`
-
-        1. Norm
-        2. Similarity
-        3. Feature Space 
-        4. Vector Space (Basis Vector, RANK, Linear Combination, Linearly Independant)
-
-- `Probability and Statistics`
-
-        1. Bayes Theorem
-
-- `Calculus`
-
-        1. Talyor Series
-
-<br>
-
-- `Todo list`
-
-        1. Maximum Likelihood Estimation        
-        2. Lagrange Multiplier Method
-        3. CRF 
-        4. Eigen Vector, Eigen Value
-        5. Decomposition(QR, Singular Value)
