@@ -204,6 +204,12 @@ SVM에서는 출력으로 객체의 Class와 Confidence Score를 낸다.
     
     SVM을 사용했을 때 성능이 더 좋기 때문이다.
 
+<div align=cetner>
+      
+![image](https://user-images.githubusercontent.com/59076451/135222535-7b971048-8b12-489f-ae1d-4d45740e660c.png)
+      
+</div>      
+
 
 <br>
 
