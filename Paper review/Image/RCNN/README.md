@@ -256,3 +256,11 @@ R-CNN을 통해 얻는 2000개의 region 또는 bounding box를 다 표현하면
       2. 남아있는 Bounding Box를 Confidence Score의 내림차순으로 정렬한다.
       3. Bounding Box가 높은 순서대로 하나씩 다른 Bounding Box와의 IoU를 조사해서 IoU가 특정 값이상 인 경우 모두 제거한다.
       4. 3의 과정을 반복해서 남아있는 Box만 취한다. 
+
+
+
+- 참고 자료 및 블로그
+
+[blog](https://velog.io/@skhim520/R-CNN-%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0)
+
+[paper](https://openaccess.thecvf.com/content_iccv_2015/html/Girshick_Fast_R-CNN_ICCV_2015_paper.html)
