@@ -207,7 +207,7 @@ SVM에서는 출력으로 객체의 Class와 Confidence Score를 낸다.
 
 <br>
 
-- Hard negative mining
+- `Hard negative mining`
 
 이미지에서 우리가 원하는 객체를 탐지한 경우 해당 Region은 Positive Sample이 되고, 그 외는 배경과 같이 Negative Sample이 된다.  
 이 때, 객체에 비해 배경의 비율이 압도적으로 높다.  
@@ -220,7 +220,7 @@ SVM에서는 출력으로 객체의 Class와 Confidence Score를 낸다.
 
 <br>
 
-- Bounding Box Regressor
+- `Bounding Box Regressor`
 
 <div align="center">
 
@@ -234,7 +234,7 @@ Bounding Box는 이 부정확한 객체의 위치를 조정해주는 알고리�
 
 <br>
 
-- Non Maximum Supression
+- `Non Maximum Supression`
 
 R-CNN을 통해 얻는 2000개의 region 또는 bounding box를 다 표현하면 bounding box들이 매우 많이 겹치게 된다.
 
