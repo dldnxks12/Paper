@@ -49,6 +49,8 @@
                     - Forward-Backward Algorithm
                     - Viterbi Algorithm
                     - Baum-Welch algorithm ~ing
+                    
+        7. 1D Convolution 
 
 
 
