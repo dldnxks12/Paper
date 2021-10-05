@@ -50,7 +50,7 @@
                     - Viterbi Algorithm
                     - Baum-Welch algorithm ~ing
                     
-        7. 1D Convolution 
+        7. 1D Convolution  ~ing
 
 
 
