@@ -32,7 +32,6 @@
         3. Transformer
 
 
-<br>
     
 #### Key Notion
 
@@ -52,6 +51,7 @@
                     
         7. 1D Convolution  ~ing
         8. BCE / CE 
+        9. Hinge Loss 
 
 
 <br>
