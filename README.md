@@ -51,7 +51,8 @@
                     
         7. 1D Convolution  ~ing
         8. BCE / CE 
-        9. Hinge Loss 
+        9. Hinge Loss
+        10. KL-Divergence
 
 
 <br>
