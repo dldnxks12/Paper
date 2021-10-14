@@ -51,7 +51,7 @@
                     - Baum-Welch algorithm ~ing
                     
         7. 1D Convolution  ~ing
-
+        8. BCE / CE 
 
 
 <br>
