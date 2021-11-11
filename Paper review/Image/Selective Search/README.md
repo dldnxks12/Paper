@@ -1,6 +1,6 @@
 ## Selective Search for Object detection `2021`
 
-해당 논문은 Object Detection에서 사용하기 위한, Object의 위치를 포착하는 문제를 다룬다.
+해당 논문은 Object Recognition에서 사용하기 위한, Object의 위치를 포착하는 문제를 다룬다.
 
 <br>
 
@@ -238,10 +238,100 @@ Hierachical Algorithm을 통해서 얻은 여러가지 가설 객체들 (Object 
 
 <br>
 
-### Object Recognition using Selective Search 
+### Object Recognition using Selective Search  ---------------- 다시  
+
+본 논문에서는 SS를 통해 얻은 Region들을 Object Recognition에 사용한다. 
+
+Object Recognition에는 주로 HOG와 BOW를 사용하는데 , SS는 다양한 color에 대한 SIFT discriptor를 차용한 BOW를 사용한다. 
+
+        HOG : Histogram of Oriented Gradients
+        BOW : Bag of Words
+
+        SIFT : 추출한 Feature를 Vector로써 표현하는 방법 - SIFT는 Scale과 Rotation에 강인하게 만들어진 알고리즘  
+
+구체적으로는 특정 scale에 대해 각 region에서 SIFT를 통해 feature extraction을 수행하고 다른 Scale에 대해서도 동일하게 반복한다.  
+결과적으로 360,000 길이의 total feature vector를 추출할 수 있고, 이를 우리가 원하는 Object와 BOW를 통한 유사도를 측정한다.
+
+유사도를 측정한 후 Classifier로는 BOW에 대해 좋은 성능을 보인다고 알려진 SVM을 사용한다.
+
+<br>
+
+<div align="center">
+
+SVN의 traninig 과정은 다음과 같다.
+
+![img_10.png](img_10.png)
+
+</div>
+
+먼저 Ground truth window를 가진 Positive Example을 준비한다.  
+SS를 통해 나온 물체가 존재하는 가설 영역 중에 Ground Truth와 Overlapping 되는 부분이 20 ~ 50% 정도 되는 영역을 Negative Example로 정한다.
+
+    negative example이 중복되는 것을 방지하기 위해, negative example 끼리 70% 이상 겹치는 부분이 있다면 배제한다.
+
+이 negative example들은 positive example들과 비슷해보이는 `구별이 어려운 example`이다.   
+negative example들을 생성하는 이유는 Positive Example들과 feature vecter에서 그 유사도가 비슷하게 되고,  
+결과적으로 SVM에서 Support vector가 될 가능성이 높기 때문이다. 즉, SVM이 결정 경계면을 학습하기 좋은 Sample들을 만들어 주는 과정인 것이다.
+
+    또한 이 '구별이 어려운 example'들을 만들어 SVM을 학습시켰을 때, Hard Negative Sample에 대해서는 확실히 구별을 하는 모습을 보인다.
+
+추가적으로 SVM에서 잘못 예측을 했다면, 해당 예측 결과를 학습 데이터에 추가해주어 학습 효율을 높인다. 
 
 
+<br>
 
 
+### Evaluation 
 
+- Diversification Strategies
+- Quality of Locations
+- Object Recognition
+
+---
+
+
+- Diversification Strategies
+
+1. Flat vs Hierarchical 
+
+<div align="center">
+
+![img_12.png](img_12.png)
+
+`MABO : Mean Average Best Overlap` 
+
+</div>
+
+2. Indivisual Diversification Strategies 
+
+<div align="center">
+
+![img_13.png](img_13.png)
+
+</div>
+
+- Quality of Locations
+
+1. Box Based Locations
+
+![img_14.png](img_14.png)
+
+2. Region Based Locations
+
+![img_15.png](img_15.png)
+
+
+- Object Recognition 
+
+![img_17.png](img_17.png)
+
+<br>
+
+### Conclusion 
+
+본 논문은 Segmentation을 사용한 선택적 region 탐색 방법을 제안한다.  
+이미지는 내재적으로 계층적인 의미를 담고 있는 경우가 많고, 여러 가지 객체들이 하나의 객체를 형성하는 경우도 많다.  
+따라서 단 하나의 bottom-up grouping 알고리즘은 절대 이러한 객체들의 location을 잘 잡아낼 수 없다.  
+이를 해결하기 위해 우리가 제안한 SS는 다양한 기준으로 객체들이 존재할 수 있는 region들을 탐색하고, 이 결과들을 서로 상호보완하여    
+객체들을 계층적으로 grouping하는 전략을 사용했다.   
 
