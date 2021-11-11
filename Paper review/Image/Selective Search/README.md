@@ -1,4 +1,4 @@
-## Selective Search for Object detection `2021`
+## Selective Search for Object detection `2013`
 
 해당 논문은 Object Recognition에서 사용하기 위한, Object의 위치를 포착하는 문제를 다룬다.
 
