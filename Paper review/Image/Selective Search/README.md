@@ -20,7 +20,7 @@ SS는 `Exhaustive Search` 와 `Segmentation`의 강점을 모은 알고리즘이
 
 <div align="center">
 
-![img.png](img.png)
+![img.png](img/img.png)
 
 a) 그림은 그릇이라는 객체 내부에 숟가락이라는 객체가 포함되어 있다.   
 b) 그림은 같은 고양이지만, 구분되는 기준에 따라 다르다. texture에 따른 기준과 색에 따른 기준 등..  
@@ -102,7 +102,7 @@ Background와 Foreground Segment들을 여러 개 만들고 이 foreground가 Co
 
 <div align="center">
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 
 왼쪽 그림을 보면 먼저 이미지 내에서 fg와 bg를 나누는 것을 볼 수 있다.
 그리고 점차 fg가 complete한 객체가 되도록 학습하는 모습을 볼 수 있다.
@@ -156,7 +156,7 @@ SS는 계층적인 Object Grouping을 위한 알고리즘을 사용한다.
 
 <div align="center">
 
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
 
 </div>
 
@@ -171,7 +171,7 @@ SS는 계층적인 Object Grouping을 위한 알고리즘을 사용한다.
 
 <div align="center">
 
-![img_3.png](img_3.png)
+![img_3.png](img/img_3.png)
 
 </div>
 
@@ -191,28 +191,28 @@ SS는 다양한 기준으로 Sampling하고, 이 Sample들을 서로 Complement�
 
 `Color Channel`
 
-![img_4.png](img_4.png)
+![img_4.png](img/img_4.png)
 
 
 `Similarity with Color`
 
-![img_5.png](img_5.png)
+![img_5.png](img/img_5.png)
 
 `Similarity with Texture`
 
-![img_6.png](img_6.png)
+![img_6.png](img/img_6.png)
 
 `Similarity with Size or Scale`
 
-![img_7.png](img_7.png)
+![img_7.png](img/img_7.png)
 
 `Similarity with Fill (Overlapped)`
 
-![img_8.png](img_8.png)
+![img_8.png](img/img_8.png)
 
 `Mixture Method`
 
-![img_9.png](img_9.png)
+![img_9.png](img/img_9.png)
 
 </div>
 
@@ -260,7 +260,7 @@ Object Recognition에는 주로 HOG와 BOW를 사용하는데 , SS는 다양한 
 
 SVN의 traninig 과정은 다음과 같다.
 
-![img_10.png](img_10.png)
+![img_10.png](img/img_10.png)
 
 </div>
 
@@ -296,7 +296,7 @@ negative example들을 생성하는 이유는 Positive Example들과 feature vec
 
 <div align="center">
 
-![img_12.png](img_12.png)
+![img_12.png](img/img_12.png)
 
 `MABO : Mean Average Best Overlap` 
 
@@ -306,7 +306,7 @@ negative example들을 생성하는 이유는 Positive Example들과 feature vec
 
 <div align="center">
 
-![img_13.png](img_13.png)
+![img_13.png](img/img_13.png)
 
 </div>
 
@@ -314,16 +314,16 @@ negative example들을 생성하는 이유는 Positive Example들과 feature vec
 
 1. Box Based Locations
 
-![img_14.png](img_14.png)
+![img_14.png](img/img_14.png)
 
 2. Region Based Locations
 
-![img_15.png](img_15.png)
+![img_15.png](img/img_15.png)
 
 
 - Object Recognition 
 
-![img_17.png](img_17.png)
+![img_17.png](img/img_17.png)
 
 <br>
 
