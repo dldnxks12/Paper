@@ -1,5 +1,7 @@
 ## Selective Search for Object detection `2013`
 
+[Paper](http://www.huppelen.nl/publications/selectiveSearchDraft.pdf)
+
 해당 논문은 Object Recognition에서 사용하기 위한, Object의 위치를 포착하는 문제를 다룬다.
 
 <br>
