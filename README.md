@@ -1,12 +1,10 @@
-
-#### Goal 
-
-    1. Paper Rewiew
-    2. Key notion of Papers 
-
-<br>
-
 #### Paper Review
+
+- 'Reinforcement Learning'
+
+        1. DQN
+        2. DPG
+        3. DDPG
 
 - `Image` 
 
@@ -31,9 +29,11 @@
         2. Seq2Seq
         3. Transformer
 
+<br>
 
-    
-#### Key Notion
+---
+
+#### Additional Knowledges
 
 - `ML and DL` 
 
