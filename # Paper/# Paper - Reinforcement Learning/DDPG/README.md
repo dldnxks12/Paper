@@ -4,14 +4,13 @@
 
 - `DDPG`
 
+
         DQN은 high dimensional state space의 문제들을 해결했지만, 여전히 discrete, low dimensional action space만을 다룰 수 있다.
         하지만 실제로 많은 task들이 continuous, high dimensional action space의 문제이다. 
 
-            -> DDPG : Non-linear FA(Neural Network) + Off policy (replay buffer) + Deterministic Policy gradient
-
                       * DQN   -> Continuous state, discrete action 다룰 수 있다. 
                         Q learning 기반
-                        TD + Non-Linear Function Approximation + Soft greedy
+                        TD + Non-Linear Function Approximation + Soft greedy + Target Network + Replay Buffer
 
                       * DPG 
                         Actor Critic 기반
@@ -19,13 +18,23 @@
 
                       * DDPG  -> Continuous state, continuous action 다룰 수 있다. (DPG + Neural Netowork)
                         Actor Critic 기반
-                        TD + Non-Linear Function Approximation + DPG
+                        TD + Non-Linear Function Approximation + DPG + Batch Normalization + Target Network + Soft update 
 
-                         
+
+        * DDPG
+            - Critic : Non-Linear FA (Neural Network) - TD update (Q learning)
+            - Actor  : DPG
+            - Replay buffer (off policy)
+            - Target Network (Double sampling issue, smoothness issue -> stablize)
+            - Soft update (Improve stablity more than just full target network update)
+            - Batch Normalization (Improve stablity with removing inner covariance shift)
+
+
 
 ---
 
 - `Discretization of Action Space`
+
 
         DQN은 Q learning의 max operation으로 인해, continuous action space에 적용하기 어렵다. 
         어떻게든 Continuous action을 DQN으로 해결해보는 방법 중에 좀 쉬워보이는 방법은 Continuous action을 discretize하는 것 
@@ -47,6 +56,7 @@
 
 - `Target Update & Soft Target Update`
 
+
         *DQN
 
         target newtork 없이 Q function approximator를 업데이트 할 경우, 
@@ -67,3 +77,12 @@
         이렇게 되면 divergence없이 critic을 일관되게 학습시킬 수 있다.  
         
         학습 속도면에서는 느려지지만, 안정성 면에서는 매우 좋아졌다. 
+
+
+---
+
+<div align="center">
+
+![img.png](img.png)
+
+</div>
