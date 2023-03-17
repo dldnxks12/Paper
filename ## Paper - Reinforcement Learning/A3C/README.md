@@ -1,5 +1,37 @@
 ### A3C `2016`
 
+
+---
+- `A2C / DQN / A3C`
+
+
+        * A2C
+        
+            Actor-Critic 알고리즘
+                Actor  : PG update 
+                Critic : TD update
+
+            Sample correlation 문제 (On policy)-> 복잡한 문제 X
+            Policy gradient -> 유연한 학습 O
+
+        * DQN
+
+            PE : Value Function Approximation with Q-Learning 
+            PI : Soft greedy policy 
+
+            Replay buffer  -> Sample correlation 해결 (Off policy -> Sample efficient)
+            Target Network -> Double sampling issue, Smoothness issue 해결 
+            Penelty -> Expensive Memory Capacity, Slow learning speed   
+    
+        * A3C
+            
+            Actor-Critic + Multi threading 
+
+            Sample correlation 문제 (On Policy) -> Thread 를 replay buffer 대신 사용 
+                -> thread를 사용하므로, replay buffer를 (off policy) 꼭 사용하지 않아도 된다.)
+
+            Add entropy to Objective function J(θ) for better exploration
+
 ---
 
 - `Asynchronous RL`
@@ -42,3 +74,41 @@
 
 ---
 
+- `A3C`
+
+
+            
+            1. Gorila framework와 같이 asynchronous actor-learner를 사용한다. 
+            
+               ->  대신 Gorila는 여러 대의 PC, parameter 서버를 사용한 것에 반해, 
+                A3C는 한 대의 PC에서 CPU의 mutli thread를 이용해 학습을 수행한다. 
+
+
+            2. Worker들이 observation을 각자 환경의 각각 다른 부분을 탐험하면서 얻도록 한다.
+               또한, 각 Worker마다 다른 exploration method를 적용해서 탐험의 다양성을 높일 수 있다.
+                
+                -> 시간적으로, worker들이 가져오는 데이터들이 1개의 agent가 가져오는 데이터 보다 uncorrelate하게 한다. (Under on policy)  
+                -> data correlation을 끊기 위해 replay buffer를 쓸 필요가 없다. 
+
+
+            3. Off policy로 학습하지 않아도 되니, 학습이 보다 더 안정적이다. 
+
+
+---
+
+- `Adding Policy Entropy to Objective function J(θ)`
+
+
+
+            A3C paper에서, 목적 함수 J(θ)에 policy의 entropy term을 추가하는게 exploration을 강화한다고 말한다.
+
+                ->  policy의 Entropy는 곧 policy의 불확실성의 정도이다.
+                    높은 Entropy를 가진 policy는 agent가 조금 더 random한 action을 할 가능성이 많다는 걸 의미한다.
+                    반대로 낮은 Entropy를 가진 policy는 agent가 보다 deterministic하게 행동할 가능성이 많다는 것이다.
+
+            J(θ)에 entropy term을 추가하게 되면서, 학습은 policy가 더 높은 entropy를 갖도록 만든다.
+            
+                -> 곧 더 exploration을 많이 하도록 장려하는 것.
+
+            Entropy term에 hyperparameter를 추가해서 A3C 모델이 exploration-exploitation trade off 문제를 적절히 조절하게 해준다.
+    
