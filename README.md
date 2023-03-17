@@ -5,6 +5,7 @@
         1. DQN
         2. DPG
         3. DDPG
+        4. A-DDPG
 
 - `Image` 
 

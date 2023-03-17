@@ -1,5 +1,7 @@
 ### Batch Normalization 
 
+`BN with pytorch` : https://eda-ai-lab.tistory.com/406  
+
 ---
 
 - `Batch normalization & Internal Covariance shift & Normalization / Whitening`
