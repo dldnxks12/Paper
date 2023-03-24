@@ -1,11 +1,16 @@
 #### Paper Review
 
-- 'Reinforcement Learning'
+- `Reinforcement Learning`
 
         1. DQN
-        2. DPG
-        3. DDPG
-        4. A-DDPG
+        2. DDQN
+        3. D3QN
+        4. DPG
+        5. DDPG
+        6. TD3
+        7. A3C
+        8. PER
+        9. NoisyNetwork
 
 - `Image` 
 
