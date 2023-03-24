@@ -108,5 +108,41 @@
 
 
 
-        
+---
+`PER - discrete? continuous?`
+
+
+
+
+        PER은 continuous action space보다 discrete action space에서 보다 더 유용하다.
+    
+        discrete action에 대해 우선순위를 정의하는게 더 쉽다. 
+        반대로 continuous action에 대해서는 보다 어렵다.
+
+
+---
+
+`PER - high dimensional space?`
+
+
+
+
+        PER을 high dimensional space에 적용할 때 몇가지 문제가 있다.
+
+        1. Computional cost if calculating priorities.
+
+            -> many possible actions and each actions need to be calculated for comparing TD errors.
+
+        2. PER relies on the magnitude of the TD Error.
+
+            -> high dimensional action space에서 TD error가 noisy할 수 있다. 이 경우, 우선순위 계산이 부정확할 수 있고, 
+               곧 학습에 악영향을 준다.
+
+        3. High dimensional action space는 replay buffer 내부에 경험들의 다양성을 유지하기 어렵게 한다.
+
+            -> agent는 정책에 따라 action space의 아주 작은 집합을 explore하고, buffer 내부의 경험들은 bias가 있다.
+               high dimensional space에서는 매우 다양한 space를 탐험해야하는데, buffer의 크기는 제한적이다.
+               따라서 buffer 내부에 다양한 경험들이 쌓이기 보다는, subspace의 경험들로 가득차는 경우가 많을 것이다. (deque 구조라면)
+               
+
         
