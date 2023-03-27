@@ -4,6 +4,8 @@
 
 - `TD3`
 
+
+
         Estimating error로 인해 일어나는 두 가지 결과에 대해 집중적으로 다룬다.
         
           1. Overestimation bias problem
@@ -21,6 +23,7 @@
 
 
 - `Overestimation bias`
+
 
 
         (Contribution of variance to Overestimation bias)
@@ -72,6 +75,7 @@
 ---
 
 - `Addressing variance`
+
 
 
         * Accumulating Error 
