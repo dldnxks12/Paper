@@ -29,6 +29,12 @@
             2. Instability 
 
                 -> 위와 같은 맥락으로, 유용하지 않은 피드백으로 인해 optimal policy로 가는 수렴과정에 osilation을 유발한다.
+                
+
+            *Techniques for reducing variance
+                        - Baseline substraction / Advantage function
+                        - Ensemble 
+                       
 
 ---
 
