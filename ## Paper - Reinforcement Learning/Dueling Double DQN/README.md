@@ -46,7 +46,11 @@
             이는 batch size를 키울수록 이로 인해 발생하는 variance는 줄일 수 있지만, 연산량이 증가한다.
 
 
-            [이미지 -> naver keep]
+<div align="center">
+
+![img.png](img.png)
+
+</div>
 
 ---
 

@@ -45,8 +45,12 @@
                     -> Paper에서는 이 두 문제를 해결할 수 있는 Clipped Double Q Learning 을 제안 !
                       (일종의 Upper-bound를 만들어 해결!)
   
+<div align="center">
+
+![img_5.png](img_5.png) ![img_3.png](img_3.png)
+
+</div>
                   
-<br>
 
         * Clipped Double Q Learning
 
@@ -97,8 +101,13 @@
           fixed target network가 없다면, 매 업데이트마다 residual error가 발생 (계속 쌓임)
           이렇게 쌓이는 에러가 그 자체로도 겁나 해로운데, 이 value estimate를 maximizing하도록 policy를 업데이트할 때 아주 재앙이 된다. (발산) 
   
-  
-          [Figure 3]
+
+<div align="center">
+
+![img_2.png](img_2.png)
+
+</div>
+
           Fixed policy와 Learned policy를 기준으로, target network를 soft update할때와 full update할 때를 비교했다.
   
           Fixed policy   : 

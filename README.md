@@ -2,8 +2,8 @@
 
 - `Reinforcement Learning`
 
-        1. DQN
-        2. DDQN
+        1. DQN 
+        2. DDQN 
         3. D3QN
         4. DPG
         5. DDPG
