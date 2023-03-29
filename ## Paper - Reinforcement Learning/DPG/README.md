@@ -72,7 +72,7 @@
           - Qw는 Qπ의 추정이기 때문에, 추정값이 포함된 Objective functon의 gradient의 sample을 아무리 뽑아서 평균을 내도 biased gradient가 된다.
           - 이러한 bias로 인해, 전체적인 object function gradient의 방향이나 값이 변할 수 있다. 
             
-                - 즉, gradient update가 stable하지 않고, convergence도 보장하지 못한다. 
+                - 즉, gradient update가 stable하지 않고, optimal policy로의 convergence도 보장하지 못한다. 
 
 
 <div align="center">
