@@ -43,6 +43,25 @@
 <br>
 
 ---
+
+- `Convergence issue`
+
+            [DPG paper에서 제안한 두 개의 알고리즘]
+
+            On-policy actor-critic with deterministic policy  -> function approximation으로 인한 bias 발생
+            Off-policy actor-critic with deterministic policy -> off policy로 인한 instability 발생 
+
+            On-policy method  -> compatible function approximator로 해결
+            Off-policy method -> Gradient TD로 해결 
+
+                    -> Off policy + TD  + linear FA = may diverge
+                    -> Off policy + GTD + linear FA = Converge
+
+<br>
+
+---
+
+
 - `Compatible function approximation`
   
         Prof.Sutton의 PG paper에서 우리는 Objective function의 gradient의 true value인 Qπ 항을 모르기 때문에 이를 Gt 또는 Function Approximating Qw으로 대체한다.
@@ -112,8 +131,5 @@ Off policy Actor Critic
 ![img_10.png](img_10.png)
       
 `Determinisitic Policy의 경우 Actor는 deterministic하기에, Critic은 Q learning을 쓰기에 ratio가 필요없다.`
-
-      -> Off policy + TD + linear FA = may diverge
-    -> Off policy + GTD + linear FA = Converge
 
 </div>
