@@ -8,6 +8,8 @@
 
             - stochastic policy gradient의 limited case라고 볼 수 있고, 이를 논문에서 증명해준다.
               따라서 기존 SPG에 사용하던 기법들이나 Converge 조건들을 DPG에 그대로 적용할 수 있다.  
+              
+                ex) compatible function approximation / actor-critic / natural gradients, etc ...
 
 <div align="center">
 
