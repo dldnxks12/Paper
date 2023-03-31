@@ -6,31 +6,36 @@
 
 
         DQN은 high dimensional state space의 문제들을 해결했지만, 여전히 discrete, low dimensional action space만을 다룰 수 있다.
-        하지만 실제로 많은 task들이 continuous, high dimensional action space의 문제이다. 
 
-                      * DQN   -> Continuous state, discrete action 다룰 수 있다. 
+                      * DQN   -> Continuous state, discrete action 다룰 수 있다. (SPG + Non-Linear FA - Neural Netowork)
                         Q learning 기반
                         TD + Non-Linear Function Approximation + Soft greedy + Target Network + Replay Buffer
 
-                      * DPG 
-                        Actor Critic 기반
+                      * DPG   -> Continuous state, continuous action 다룰 수 있다. (DPG + Linear FA)
+                        Actor Critic 기반 (On-Policy Actor-Critic / Off-Policy Actor-Critic 제안) 
+                                -> convergence issue 해결 (Compatible FA, Gradient TD)
                         TD + Linear Function Approximation + DPG
 
-                      * DDPG  -> Continuous state, continuous action 다룰 수 있다. (DPG + Neural Netowork)
-                        Actor Critic 기반
-                        TD + Non-Linear Function Approximation + DPG + Batch Normalization + Target Network + Soft update 
+                      * DDPG  -> Continuous state, continuous action 다룰 수 있다. (DPG + Non-Linear FA - Neural Netowork)
+                        Actor Critic 기반 (Off-Policy Actor-Critic 제안)
+                                -> Convergence 보장 X 
+                        TD + Non-Linear Function Approximation + DPG + Batch Normalization + Target Network + Replay Buffer + Soft update 
 
 
-        * DDPG
-            - Critic : Non-Linear FA (Neural Network) - TD update (Q learning)
+        * DDPG        
+        
             - Actor  : DPG
+            - Critic : Non-Linear FA (Neural Network) - TD update 
             - Replay buffer (off policy)
             - Target Network (Double sampling issue, smoothness issue -> stablize)
             - Soft update (Improve stablity more than just full target network update)
             - Batch Normalization (Improve stablity with removing inner covariance shift)
+            - Ornstein-Uhlenbeck noise for exploration
 
 
-
+        * DQN, DDPG -> Can train with raw sensory input !! (Ex. Train robotics with raw image input)
+        
+        
 ---
 
 - `Discretization of Action Space`
@@ -65,6 +70,8 @@
 
         업데이트 되는 Q network가 target value인 Q(s', a')를 계산하는 데에도 사용되기 때문에 Q 값이 diverge하는 일이 생긴다. 
         따라서 DQN에서는 target network를 만들어서 학습을 조금 더 stable하게 만들었었다.
+
+<br>
 
         * DDPG
 
