@@ -1,3 +1,3 @@
-### HER (Hindsight Experience Replay) `2018`
+### HER (Hindsight Experience Replay) `2017 NIPS`
 
 ---
