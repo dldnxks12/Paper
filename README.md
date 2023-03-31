@@ -9,8 +9,9 @@
         5. DDPG
         6. TD3
         7. A3C
-        8. PER
+        8. PER        
         9. NoisyNetwork
+        10.HER
 
 - `Image` 
 
