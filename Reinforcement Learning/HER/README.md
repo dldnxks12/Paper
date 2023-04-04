@@ -51,7 +51,30 @@
         Episode는 p(s, g) 분포에서 state, goal pair를 sampling하면서 시작된다.
         매 time step 마다 agent는 current state + current goal을 입력으로 받고 
         r_g(s, a)에 대한 reward를 받는다. ( r_g : goal과 관련된 reward function )
+
+        또한 state와 goal을 어떤 조건부 확률적 형태로 연결시킨게 아니라 단순히 concatenate 시킴
+
+            -> 좋은 approximator(neural network 등)라면 알아서 잘 분간할 것이라 기대 
+                -> 역시나 좋은 결과를 얻었다. 
           
+
+---
+- `Count-based exploration method`
+
+    
+        
+        Count-baesd exploration은 덜 방문한 state나 action을 더 열심히 exploration하게 하는 방법
+        Sparse reward / large state space에서 잘 사용되는 방법 
+        
+            각 state, action을 몇 번 방문했는지 count한다.
+            Agent는 단순히 estimate value만으로 다음 state, action을 선택하는게 아니고,
+            estimate value + state 방문 수 / action 방문 수에 따라서 준 bonus를 포함해서 다음 state / action을 선택한다. 
+
+            *bonus : 덜 방문한 state / action에 큰 weight를 주도록 설계 
+
+                -> 대표적인 방법 : UCB1 algorithm 
+
+        
 
 ---
 - `Hindsight Experience Replay`
@@ -81,13 +104,15 @@
         HER의 접근은 이 trajectory를 다른 goal로 다시 보자는 것
           -> 이 trajectory가 goal state로 가는 길에 대해서는 도움을 주지 못해도,
              어떻게 s4에 도달할 수 있는지는 알려주지 않냐!
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
+
+---
+
+<br>
+
+<div align="center">
+
+`HER algorithm`
+
+![img.png](img.png)
+
+</div>
