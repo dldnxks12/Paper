@@ -105,8 +105,7 @@
           -> 이 trajectory가 goal state로 가는 길에 대해서는 도움을 주지 못해도,
              어떻게 s4에 도달할 수 있는지는 알려주지 않냐!
 
-
-        
+ 
 ---
 
 <br>
@@ -116,5 +115,30 @@
 `HER algorithm`
 
 ![img.png](img.png)
+
+</div>
+
+---
+- `Experiment`
+
+
+        1. Multi-goal에 대해서 더 성능이 좋다.
+        2. Final strategy <<< Future strategy
+        3. Sparse reward 문제를 푸는데 아주 성능이 좋다. 더 나아가서 이게 아니면 문제를 못푸는 경우가 많다. 
+        4. reward shaping 하면 성능이 떨어진다 -> pure sparse binary reward일 때가 더 좋더라
+
+<div align="center">
+
+`DDPG with & without HER`
+
+![img_2.png](img_2.png)
+
+
+<br>
+
+`Multi-goal vs Single-goal`
+
+![img_3.png](img_3.png)
+
 
 </div>
