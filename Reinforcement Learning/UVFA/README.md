@@ -3,12 +3,10 @@
 ---
 - `topics`
 
-        1. UVFA concept
-        2. UVFA learning architecture 
-        3. UVFA in supervised learning setting
-        4. UVFA in reinforcement learning setting 
-            - Generalizing from Horde / Direct bootstraping
-        5. Future application 
+        1. UVFA concept 
+        2. UVFA in supervised learning setting
+        3. UVFA in reinforcement learning setting 
+            - Generalizing from Horde / Direct bootstrapping
 
 ---
 - `UVFA concept`
@@ -44,6 +42,9 @@
 
             state -> ϕ(s) / goal -> ψ(g) 로의 non-linear mapping을 학습할 것 (Neural network)   
 
+        이걸 잘 학습시켜놓으면 처음 보는 (state, goal) 조합에 대해서도 아주 잘 동작한다.
+            -> generalization good ... 
+
 
         여기서 말하는 sparse matrix의 원소들은 true target value (optimal value function)
         low-rank matrix 원소들도 true target value (optimal value)
@@ -53,8 +54,7 @@
                    (여기 실험에선 dim = 7이면 충분하댔음.)
 
 
-
-        다시 말하지만, UVFA의 concept은 state, goal 모두를 아우르는 sparse matrix 내의 많은 optimal value 들을 
+        UVFA의 concept은 state, goal 모두를 아우르는 sparse matrix 내의 많은 optimal value 들을 
         single, unified function approximator로 해결한다는 것 
         
 
@@ -78,14 +78,16 @@
             -> This is Horde architecture 
 ---
 
-- `UVFA learning architecture`
+- `UVFA in supervised learning setting`
 
-
-        3가지 구조가 있고 paper에서는 3번째 구조 선택 . 
+        3가지 구조가 있고 paper에서는 3번째 구조 선택 
 
         # two stage - two stream :
-                1. state -> ϕ(s) <-> ϕ'(s) / goal -> ψ(g) <-> ψ'(g) 의 non-linear mapping 학습 with regression 
-                2. ϕ'(s) / ψ'(g)의 함수 h 와 target sparse matrix의 non-linear mapping 학습 with regression 
+                
+                stage 1 : true target value matrix 생성 -> low-rank matrix로 분해 ϕ'(s) / ψ'(g) get (target embeddings) 
+                            
+                stage 2 : input state, goal / output ϕ(s), ψ(g)의 non-linear mapping을 학습 (target : ϕ'(s) / ψ'(g))
+ 
 
 <div align="center">
 
@@ -93,8 +95,65 @@
 
 </div>
 
+
+        state 1 - target embedding들을 get
+        state 2 - actual s, g에서 이 target embedding을 얻는걸 목표로 학습  
+
 ---
 
-- `UVFA in supervised learning setting`
+- `UVFA in Reinforcement learning setting`
+
+
+        Supervised learning setting과는 달리 ground-truth target value가 없다.
+        더군다나, 더이상 state가 fully observable하지도 않다. 
+        
+        여기서 2가지 방법이 있다.
+        1. Generalization from Horde
+        2. Direct bootstrapping 
+
+
+        #1 Generalization from Horde 
+
+            Horde architecture의 각 demon은 1개의 goal에 대해 value function approximation을 찾는다.
+            이를 통한 UVFA 방법은, Horde를 통해 얻은 값들을 target matrix의 원소로 하는 것이다.
+            이후 기존의 two-stage two-stream 방법을 쓴다. 
+
+                *Algorithm 1 (lines 2-10)을 보면, Horde가 학습한 Q(s,a;g)를 모아서 matrix M을 만든다. 
+
+                    demon 1 -> Q(s, a; g1) 
+                    demon 2 -> Q(s, a; g2)
+                    demon 3 -> Q(s, a; g3)
+
+            
+            Horde를 이용한 방법의 퀄리티는 Horde가 축척한 exprience를 양에 의존적이다. 
+            또한 들어오는 data가 agent가 environment에서 explore하는 족적에 의존적이라는 게 문제.
+            대부분의 경우, 우리가 원하는 goal에 관련된 데이터가 많지 않다. 
+
+                예를 들어, 4x4 tabular case에서 16개의 demon이 있다고 하면, 
+                우리는 goal = (4, 3)이 목적인데, agent가 탐험하는 구간이 여기랑은 동떨어진 부분이라면, 
+                이 goal을 갖는 demon을 학습할 데이터가 안나올 수 있다는 게 문제.  
+                
+
+<div align="center">
+                
+![img_5.png](img_5.png)
+            
+</div>
+
+
+        #2 Direct bootstrapping 
+  
+          Horde를 써서 우회하는거 말고 UVFA를 Q learning으로 바로 학습할 수도 있다.         
+
+          goal에 대해 generalizing 하는 동시에 function approximation으로 bootstrapping하기 때문에 
+          학습이 좀 불안정하다 -> learning rate 조절해서 해결할 수 있다. 
+
+
+<div align="center">
+
+![img_6.png](img_6.png)
+
+</div>
+
 
 
