@@ -60,37 +60,38 @@ Learning and planning in env with delayed feedback
 - `delay 처리 전략`
 
 
-    #1. General planning method
-
-        1) Wait agent :
-
-            k step을 기다리고 undelayed MDP에서 처럼 optimal action을 고르는 것. 
-              -> mountain car 문제처럼 waiting을 용납하지 못하는 문제에는 적용 x
-              -> 주로 sub-optimal
-
-        2) CDMDP를 MDP처럼 보기 (memoryless method = deterministic policy)
-
-            몇몇 환경에서는 꽤 괜찮은 policy를 얻을 수 있다. (특히, k가 state transition의 크기에 비해 상대적으로 작을 때) 
-
-            CDMDP learning 문제에서, eligibility trace is works well. (= Sarsa(λ))
-
-
-        3) Augmented method 
-
-            Construct an MDP equivalent to the original CDMDP in the much larger state space SxA_k
-            Corresponding optimal policy is known to be an optimal policy for CDMDP!
-
-              Unfortunately, this expansion makes MDP planning algorithm intractable for large k. 
-                  -> paper에서는 k=5 이상부터 intractable한 것으로..
- 
-
-    #2. Proposed method - Augmented method for 4 special cases 
-
-        이 논문에서는 k에 따라 state space가 커지는 건 피할 수 없지만,
-        이 computational burden을 우회하고 최적 or 근최적해를 얻을 수 있는 4가지 special case를 제안한다. 
-
-
-    # Experiments에서는 Memoryless methodd와 MBS+MPA를 비교 (K가 상대적으로 크지 않을 때에는 Memoryless method도 나쁘지는 않다.) 
+    
+        #1. General planning method
+    
+            1) Wait agent :
+    
+                k step을 기다리고 undelayed MDP에서 처럼 optimal action을 고르는 것. 
+                  -> mountain car 문제처럼 waiting을 용납하지 못하는 문제에는 적용 x
+                  -> 주로 sub-optimal
+    
+            2) CDMDP를 MDP처럼 보기 (memoryless method = deterministic policy)
+    
+                몇몇 환경에서는 꽤 괜찮은 policy를 얻을 수 있다. (특히, k가 state transition의 크기에 비해 상대적으로 작을 때) 
+    
+                CDMDP learning 문제에서, eligibility trace is works well. (= Sarsa(λ))
+    
+    
+            3) Augmented method 
+    
+                Construct an MDP equivalent to the original CDMDP in the much larger state space SxA_k
+                Corresponding optimal policy is known to be an optimal policy for CDMDP!
+    
+                  Unfortunately, this expansion makes MDP planning algorithm intractable for large k. 
+                      -> paper에서는 k=5 이상부터 intractable한 것으로..
+     
+    
+        #2. Proposed method - Augmented method for 4 special cases 
+    
+            이 논문에서는 k에 따라 state space가 커지는 건 피할 수 없지만,
+            이 computational burden을 우회하고 최적 or 근최적해를 얻을 수 있는 4가지 special case를 제안한다. 
+    
+    
+        Experiments에서는 Memoryless methodd와 MBS+MPA를 비교 (K가 상대적으로 크지 않을 때에는 Memoryless method도 나쁘지는 않다.) 
 
 ---
 
