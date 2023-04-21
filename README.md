@@ -4,9 +4,7 @@
 
 - Keywords
 
-`Reinforcement Learning` `Delayed RL` 
-
-`Vision` `NLP` `Flood Prediction`
+`Reinforcement Learning` `Delayed RL` `Computer Vision` `NLP` `Flood Prediction`
 
 
 
