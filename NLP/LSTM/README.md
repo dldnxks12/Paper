@@ -1,5 +1,7 @@
 ### LSTM
 
+[LSTM reference](https://wikidocs.net/22888)
+
 ---
 
 - `RNN architecture`
