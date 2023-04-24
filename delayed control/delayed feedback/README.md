@@ -103,6 +103,12 @@ Learning and planning in env with delayed feedback
                 planning에서 다음 state를 찾고, reward를 모으는 등의 방법은 
                 내가 쉽게 이해한 그 방법이다.
 
+                1. 주어진 S, A, P, R, gamma로 MDP를 구성한다. <S, A, P, R, gamma>
+                2. MDP에 대해 optimal V, policy를 찾는다. (ex. dynamic programming)
+                3. I = (s5, a1, a2, a3, a4)가 주어졌을 때, s5에서 a1, a2, a3, a4에 대한 Q 값을 계산한다.
+                4. 이 중 optimal한 선택을 한다. 
+          
+
             #extend MBS to learning
 
                 discrete state, action space에서는 큰 문제없이 사용할 수 있다.  (case1, case3)
