@@ -259,6 +259,33 @@
 
 
 
+---
+
+        # 6 Neural Fitted Q Iteration
+
+            높은 정확도 + 적은 training sample로 generalize를 잘하는 능력 덕분에 
+            Neural network ? value function을 표현하는 분야의 star가 됬다!
+
+            Online RL에서.. current update는 지금까지 해온 업데이트들에 예측할 수 없는 영향을 준다.
+                (전체적인 Weight가 바뀌잖아)
+            
+            하지만 Batch RL에서는 여태까지 확인한 모든 transition들에 대한 value function을 모두 동시에 업데이트한다.
+            그래서 이전에 들인 공을 무너뜨리는 영향을 줄일 수 있다. 
+            
+                -> NFQ의 motivation 
+
+
+            all training instance들을 동시에 update할 수 있다는 점은 batch supervised learning의 적용을 가능케 했다.
+            특히 NFQ framwork에서 핵심 fitting step으로 adaptive supervised learning 알고리즘인 Rprop이 사용된다. 
+
+
+<div align="center">
+
+![img_8.png](img_8.png)
+
+</div>        
+            
+            
 
         
 
