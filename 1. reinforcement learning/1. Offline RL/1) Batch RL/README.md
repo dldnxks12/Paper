@@ -234,8 +234,31 @@
                 Policy improvement : greedy policy 
 
 
+---
+
+<div align="center">
+
+![img_7.png](img_7.png)
+
+</div>
+
+
+
+        # 5 Identifying batch algorithms
 
         
+            # online method 
+            pure online   : Q learning
+
+            # offline method 
+            pure batch    : FQI, LSPI, KADP
+
+
+            # in-between
+            grwoing batch : NFQ(experience replay)
+
+
+
 
         
 
