@@ -13,7 +13,7 @@
       즉, 2개의 LSTM을 Encoder, Decoder 구조로 연결 
 
     - 긴 시계열 데이터도 문제없다. 
-    - Input sequence를 뒤집어 넣은게 성능이 좋아졌다고 하는데, 이유는 잘 이해가 안된다. 기억해두기만 하자. 
+    - Input sequence를 뒤집어 넣은게 성능이 좋아졌다, time-lag 관련 
 
 ---
 
