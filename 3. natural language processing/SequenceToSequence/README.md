@@ -1,12 +1,43 @@
-### Seq2Seq Learning with Neural Networks
+### Sequence to Sequennce Learning with Neural Networks
+
+---
+
+#### Why not DNN? Why LSTM?
+               
+    DNN? labeling된 큰 데이터셋만 있으면 성능이 좋은데, 시계열 데이터는 잘 못다룬다.
+    So, multi-layer LSTM 사용하는 방법을 제시
+      -- 1. Input sequence를 multi-layer LSTM으로 인코딩 
+      -- 2. latent feature 추출 
+      -- 3. mult-layer LSTM으로 다시 디코딩 
+
+    - 긴 시계열 데이터도 문제없다. 
+    - Input sequence를 뒤집어 넣은게 성능이 좋아졌다고 하는데, 이유는 잘 이해가 안된다. 기억해두기만 하자. 
+
+---
+
+    DNN은 input - output의 dimension이 고정되어있다.
+    그래서 질문-대답과 같은 sequence to sequence의 domain-independant하게 문제를 다룰 수 없다.
+    이 문제를 여러개의 LSTM을 이용해서 해결할 수 있다. 
+    
+    *Oh? How?
+
+    1. 1개의 LSTM을 이용해서 Input sequence를 fixed-dimenstion의 vector로 바꾼다.
+    2. 하나의 LSTM은 더 사용해서 이 fixed-dimension vector에서 model output을 낸다.
+
+<div align = center>
+  
+![125725545-347c14a3-f0ce-4756-a75c-f82b70813c12](https://user-images.githubusercontent.com/59076451/126780457-f6e0b9a8-e8ed-48e2-9ca4-fb013084d2d0.png)
+
+</div>    
+    
+    
 
 
-#### Abstract
-
-- DNN을 보완
 - 크기가 고정된 입력에 대해서만 데이터를 처리할 수 있었지만, 이제 가변 길이에 대해서도 다룰 수 있게 됨
 - 2개의 LSTM을 Encoder 그리고 Decoder 구조로 연결 
 - 입력을 Reverse하게 배치해서 넣어주면 더 좋은 성능을 보임
+
+---
 
 #### Introduction
 
@@ -16,7 +47,7 @@
 - Encoder에서 입력받은 문장에 대한 일종의 Latent Vector를 Decoder로 넘겨주는 과정으로 이해할 수 있다.
 - 추가적으로 입력과 출력에 서로 다른 LSTM을 사용하고, 4 layer로 구성한다. 또한 입력의 순서를 뒤집어서 입력한다.<br>이는 입력 문장을 뒤집어도 Source와 Target사이의 거리 평균은 동일하게 유지되지만 minimal time lag가 줄어들기 떄문에 성능이 향상된다고 논문에서는 예측한다.
 
-![125725545-347c14a3-f0ce-4756-a75c-f82b70813c12](https://user-images.githubusercontent.com/59076451/126780457-f6e0b9a8-e8ed-48e2-9ca4-fb013084d2d0.png)
+
 
 #### Experiment
 
